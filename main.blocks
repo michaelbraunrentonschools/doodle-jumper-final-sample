@@ -1,0 +1,100 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="SpriteKindLegacy" id="XsDU6%)!eVO.Nq![FuL7">0Player</variable><variable type="SpriteKindLegacy" id="fAWlcHwA[r.ExNaXbjG;">1Projectile</variable><variable type="SpriteKindLegacy" id="K]`Jvdcj|9yK~jcS=K/m">2Food</variable><variable type="SpriteKindLegacy" id="XC)1kNXqWG*A`/.a^b3h">3Enemy</variable><variable type="SpriteKindLegacy" id="E854pPA4Ih)6k$e--|nz">4Object</variable><variable id="P_HoC#3.1730GAUEO);I">sprite</variable><variable id="#OL4ZInqF.sb]{khN!k]">otherSprite</variable><variable id="GT!-La7[5k,p$%A7CqVF">Jumper</variable><variable id="/Wt^OU#HmE}AKVo*VHgv">Trampoline</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="gamesettilemap"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="map"><shadow type="tilemap_image_picker"/><block type="screen_image_picker"><field name="img">img`
+8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 5 f f f f f f f f f f 5 f f f 
+f f f f f f 5 f f f f f f f f f f f f f f f 5 f f f f f f f f f f f f f f f f f f f f f f 5 f f f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f 5 f f f f f f f f f f f f f f f f 5 f f f f f f 5 f f f f f f f f f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 5 f f f f f f f f f 
+f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
+f f f f f f f 5 f f f f f f f f f 5 f f f f f f f f f f f f f f f f f f 5 f f f f f f f f f f f f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f f f f f f f f f f f f f 5 f f f f f f f f f f f f f f f f f 5 f f f f f f f f f f f f f 5 f f f 
+f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
+f f f f f f f f f f f f f f f f f f f f f f f d d f f f f f f f b b b b b b f f f f f f f f f f f f f f b b b b b b f f f f f f 
+b b f f f f f f f b b b b b b f f f f f f f f d d f f f f f b b b b b b b b b b b f f f f f f b b b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b b b b b d d d d d d d d b b b b b b b b b b b b b b f f f f f f b b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b b b b b d 1 1 d d 1 1 d b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b b b b b d d d d d d d d b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b b b b b b b b d d b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b 
+b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b 
+b b b b b 9 9 9 9 9 9 9 9 9 b b b b b b b b b 9 9 9 9 9 9 9 b b b b b b 9 9 9 9 9 9 9 9 9 9 b b b b b b b b b 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 b b b b 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 9 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 9 9 9 
+9 9 9 9 9 9 9 9 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 9 9 9 
+9 9 9 9 9 9 9 9 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 9 9 9 9 9 9 9 9 1 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 1 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 9 9 9 9 9 9 9 9 1 1 1 1 1 1 1 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 1 9 9 9 
+9 9 9 9 9 9 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 1 1 1 1 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 1 9 9 9 9 
+9 9 9 9 9 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 1 1 9 9 9 
+9 9 9 9 1 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 1 1 1 9 9 9 
+9 9 9 1 1 1 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 9 9 9 9 
+9 9 9 9 1 1 1 1 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 1 1 1 9 9 9 9 
+9 9 9 9 9 9 9 1 1 1 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 3 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 3 5 3 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 3 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 6 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+9 9 9 9 9 9 9 6 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 3 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 3 5 3 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 3 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 9 9 9 9 9 9 9 6 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 9 9 9 9 9 6 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e e e e e e d d e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e d e e e e d d e e e e e e d d e e d e e e e e e e d e e e d d e e e e d e e e e e e e e e e e 
+e e e d e e e e e d d d e e e e e e e e e e e e e e e e d e d d e e e e e e e e e e e e e e e e e e e e e e e e d d e e e e d e 
+e e e d e e d e e e e e e e e e e d d e e e e e e e e e e e e e e e e d e e e d e e d d e e e e e e e e e e e e d d e e e e e e 
+e e e e e e e e e e e e e e e e e d d e e e d e e e d d e e e e e e e d e e e e e e e e e e e e e e d d d e e e e e e e e e e e 
+e e e e e e e e e e e e d e e e e e e e e e e e e e d d e e e e e e e d e e e e e e e e e e e e e e d d d e e e e e e e d d e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e d d d e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`</field></block></value><next><block type="variables_set"><field name="VAR" id="GT!-La7[5k,p$%A7CqVF">Jumper</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+4 4 4 4 6 4 4 6 4 4 4 7 4 4 4 4 
+4 7 4 4 4 4 7 4 4 7 4 6 4 4 4 4 
+4 4 7 7 6 7 6 7 7 6 6 6 6 6 4 4 
+4 6 8 7 6 6 7 7 8 6 6 6 6 6 4 6 
+4 4 6 8 6 6 7 8 6 6 6 6 6 6 4 4 
+4 4 6 6 6 6 6 6 6 6 6 6 6 6 4 7 
+7 4 6 6 6 6 6 6 6 7 6 6 6 6 4 4 
+4 4 6 6 6 7 6 6 6 7 6 6 6 6 4 6 
+4 7 6 6 6 7 6 7 6 8 6 6 6 6 4 4 
+4 4 6 6 6 8 6 8 6 6 6 6 6 6 4 4 
+4 6 6 6 6 6 6 6 6 7 7 6 6 6 4 7 
+7 4 6 6 6 6 7 7 7 7 6 6 6 6 4 4 
+4 4 6 6 6 6 6 6 6 6 6 6 6 6 6 4 
+4 7 6 6 6 6 6 6 6 6 6 6 6 7 4 4 
+4 4 4 4 4 6 4 4 4 7 4 4 4 4 4 4 
+4 4 6 4 4 7 4 4 6 4 4 4 6 4 7 4 
+`</field></shadow></value><value name="kind"><shadow type="spritetype"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="camerafollow"><value name="sprite"><shadow type="variables_get"><field name="VAR" id="GT!-La7[5k,p$%A7CqVF">Jumper</field></shadow></value><next><block type="Sprite_blockCombine_set"><field name="property">Sprite.ay@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="GT!-La7[5k,p$%A7CqVF">Jumper</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">100</field></shadow></value><next><block type="variables_set"><field name="VAR" id="/Wt^OU#HmE}AKVo*VHgv">Trampoline</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+6 . . 6 . . . 6 6 . . . 6 . . 6 
+6 . . 6 . . . 6 6 . . . 6 . . 6 
+6 . . 6 6 6 6 6 6 6 6 6 6 . . 6 
+6 . 6 6 6 d d d d d d 6 6 6 . 6 
+6 6 6 d d d d d d d d d d 6 6 6 
+6 . 6 6 6 d d d d d d 6 6 6 . 6 
+6 . . 6 6 6 6 6 6 6 6 6 6 . . 6 
+6 . . 6 . . . 6 6 . . . 6 . . 6 
+6 . . 6 . . . 6 6 . . . 6 . . 6 
+6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritetype"><field name="MEMBER">Object</field></shadow></value></block></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="GT!-La7[5k,p$%A7CqVF">Jumper</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">300</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">400</field></shadow></value><next><block type="spritesetpos"><value name="sprite"><block type="variables_get"><field name="VAR" id="/Wt^OU#HmE}AKVo*VHgv">Trampoline</field></block></value><value name="x"><shadow type="positionPicker"><field name="index">300</field></shadow></value><value name="y"><shadow type="positionPicker"><field name="index">520</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="spritesoverlap" x="596" y="0"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritetype"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritetype"><field name="MEMBER">Object</field></shadow></value><statement name="HANDLER"><block type="hudChangeScoreBy"><value name="value"><shadow type="math_number"><field name="NUM">1</field></shadow></value><next><block type="Sprite_blockCombine_change"><field name="property">Sprite.vy@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="GT!-La7[5k,p$%A7CqVF">Jumper</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">-250</field></shadow></value><next><block type="spritesetkind"><value name="sprite"><block type="variables_get"><field name="VAR" id="/Wt^OU#HmE}AKVo*VHgv">Trampoline</field></block></value><value name="kind"><shadow type="spritetype"><field name="MEMBER">Object</field></shadow></value><next><block type="Sprite_blockCombine_change"><field name="property">Sprite.x@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="/Wt^OU#HmE}AKVo*VHgv">Trampoline</field></block></value><value name="value"><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">-70</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">70</field></shadow></value></block></value><next><block type="Sprite_blockCombine_change"><field name="property">Sprite.y@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="/Wt^OU#HmE}AKVo*VHgv">Trampoline</field></block></value><value name="value"><block type="device_random"><value name="min"><shadow type="math_number"><field name="NUM">-50</field></shadow></value><value name="limit"><shadow type="math_number"><field name="NUM">-60</field></shadow></value></block></value></block></next></block></next></block></next></block></next></block></statement></block><block type="gameupdate" x="10" y="590"><statement name="HANDLER"><block type="Sprite_blockCombine_change"><field name="property">Sprite.x@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="GT!-La7[5k,p$%A7CqVF">Jumper</field></block></value><value name="value"><block type="keydx"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation></block></value></block></statement></block></xml>
